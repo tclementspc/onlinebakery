@@ -1,0 +1,115 @@
+
+
+body {
+    font-family: 'Source Sans Pro ', sans-serif;
+    color: white;
+    background-color: #ff00ff;
+}
+
+
+h1,
+h2,
+h3,
+.card-body > .card-title {
+    font-family: 'Lato';
+}
+
+
+.card-title {
+    font-weight: 500;
+    font-size: 1.25rem;
+}
+
+h2 {
+    color: #ff00ff;
+}
+
+.card-img-overlay .card-title {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.row-content {
+    padding: 50px 0;
+    border-bottom: 1px ridge;
+    min-height: 200px;
+}
+
+.site-footer {
+    background-image: linear-gradient(#cec8ff, white);
+    padding: 20px 0;
+    margin-top: 2rem;
+}
+
+.navbar-brand {
+    max-width: 4rem;
+    margin-right: 2rem;
+}
+
+
+navbar {
+    background-color: #520326;
+    color: white;
+    font-family: "Source Sans Pro", sans serif;
+    font-size: 16px;
+    margin-bottom: 2rem;
+    min-height: 8rem;
+}
+
+.page-enter {
+    opacity: 0;
+    transform: translateX(-100%);
+}
+
+.page-enter-active {
+    opacity: 1;
+    transform: translateX(0%);
+    transition: 300ms ease-out;
+}
+
+.page-exit {
+    opacity: 1;
+}
+
+.page-exit-active {
+    opacity: 0;
+    transition: 300ms ease-in;
+}
+
+
+
+header {
+    color: #ff00ff;
+
+}
+#foot {
+    color: white;
+}
+
+.birthday {
+    color: #f06e9c;
+    text-align: center;
+    padding-top: 30px;
+}
+.heart {
+    padding-bottom: 10px;
+    padding-top: 15px;
+}
+#motto {
+    color: #f06e9c;
+    padding-bottom: 60px;    
+}
+#firstpic {
+    padding-top: 40px;
+}
+#yourCart {
+    color: white;
+    background-color: #f06e9c;
+    font-style: Source Sans Pro, sans serif;
+    /* font-size: 14px; */
+}
+
+
+h3 {
+    color: #ff00ff;
+}

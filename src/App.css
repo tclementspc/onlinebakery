@@ -37,3 +37,328 @@
     transform: translateY(0px);
   }
 }
+body {
+  background-color: #3d131f;
+}
+.discount {
+  color: white;
+  text-align: center;
+}
+h6 {
+  color: white;
+  padding-bottom: 20px;
+}
+#email {
+  padding-top: 5px;
+  padding-bottom: 7px;
+  font-weight: bold;
+  margin-left: 350px;
+}
+#emails {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+#pictures {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+#selection {
+  color:#f4eb49;
+  font-style: Lato;
+  font-size: 20px;
+  font-weight: bold;
+
+  margin-left: 50px;
+}
+#select {
+  margin-top: 30px;
+}
+
+.navbar-dark { 
+  color: white;
+  font-family: "Source Sans Pro", sans serif;
+  font-size: 16px;
+  background-color: #55071d;
+}
+header {
+  color: #f06e9c;
+  padding-bottom: 100px;
+}
+#cake {
+  color: yellow;
+}
+#sale {
+  color: #f06e9c;
+}
+#return {
+  color: white;
+}
+#foot {
+  color: white;
+}
+
+.birthday {
+  color: #f06e9c;
+  text-align: center;
+  padding-top: 30px;
+}
+.heart {
+  padding-bottom: 10px;
+  padding-top: 15px;
+}
+#subscribe {
+  margin-bottom: 40px;
+}
+#motto {
+  color: #f06e9c;
+  padding-bottom: 60px;    
+}
+#firstpic {
+  padding-top: 40px;
+}
+#yourCart {
+  color: white;
+  background-color: #f06e9c;
+  font-style: Source Sans Pro, sans serif;
+  /* font-size: 14px; */
+}
+#homeImages {
+  background-color: #3d131f;
+  padding-right: 20px;
+  padding-bottom: 80px;
+}
+
+#homeShopbtn {
+  color: #f06e9c;
+  font-size: 18px;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+h2 {
+  color: #f06e9c;
+  font-style: Ledger;
+}
+
+#homeImagesSmall {
+  padding-right:10px;
+  background-color: #3d131f;
+  
+}
+h3 {
+  color: #f06e9c;
+}
+#courselLabel {
+  font-family: Source Sans;
+  font-size: 18px;
+  color: #f06e9c;
+}
+.birthdayClubDiv {
+  color: #f06e9c;
+  font-family: Lato, sans serif;
+  font-size: 40px;
+}
+/* I wanted the p element to be a different color and smaller in the birthdayclubdiv */
+
+#shopPromotion, h2 {
+  font-family: Lato;
+  color: #f4eb49;
+}
+.rollDisplay {
+  font-family: Source Sans Pro;
+  font-size: 16px;
+  color: white;
+  background-color: #3d131f;
+  padding-top: 60px;
+  padding-bottom: 30px;
+}
+#featuredProducts {
+  background-color: #3d131f;
+} 
+p {
+  color: white;
+  font-family: Source Sans Pro;
+  font-size: 16px;
+}
+
+.carouselSlide {
+  background-color: #3d131f;
+}
+header {
+  font-family: Limelight;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#submitShopbtn {
+  background-color: #f06e9c;
+  color: white;
+  font-weight: bold;
+}
+#inputShopbtn {
+  background-color: red; 
+  color: #f06e9c;
+  font-size: 20px;
+}
+#shopNowbtn {
+  margin-top: 100px;
+  color:#f06e9c
+}
+#searchShopbtn {
+  font-weight: bold;
+  background-color: white;
+  color: #55071d;
+}
+#search {
+  color: white;
+}
+
+
+h3 {
+  font-family: Lato, sans serif;
+  color: green;
+  font-size: 25px;
+  font-weight:200px;
+}
+#shopPhotos {
+  padding-right: 8px;
+}
+#browseButton {
+  padding: white;
+  color: black;
+  font-family: Source Sans Pro, sans serif;
+  font-size: 18px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+
+}
+.inputBox {
+  color: #3d131f;
+  font-family: Source Sans Pro;
+  font-size: 18px;
+}
+span {
+  font-family: Lato, sans serif;
+  /* font-size: 14px; */
+  color: #f06e9c;
+  padding-top: 90px;
+}
+.home-images {
+  max-width: 100%;
+  height: auto;
+  margin-right: 40px;
+  margin-bottom: 100px;
+}
+.title {
+  color: white;
+  font-style: Lustria;
+     background-color:#3d131f;
+     padding-bottom: 30px;
+}
+h5 {
+  color: #f06e9c;;
+}
+.products {
+  color:  #f06e9c;
+  padding-bottom: 30px;
+  padding-top: 30px;
+} 
+#social {
+  color: #f06e9c;
+}
+
+
+.left-div {
+  float: left;
+}
+.right-div {
+      float: left;
+}
+.list-unstyled {
+  color: white;
+}
+#return {
+  color: white;
+}
+
+.div-example {
+  width: 300px;
+  display: inline-block;
+}
+.image-title {
+  width: 300px;
+  display: inlne-block;
+  justify-content: center;
+}
+.thumbnail {
+  width: 165px;
+  display: block;
+  vertical-align: text-bottom;
+}
+#slogan {
+  color: #f06e9c;
+  font-style: Sansita;
+}
+#decadentslogan {
+  padding-top: 30px;
+}
+#birthdayicon {
+  padding-top: 20px;
+}
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+} 
+h3 {
+  font-style: Ledger, sans serif;
+  color: #f06e9c;
+} 
+.addtocart {
+  color: black;
+  display:block;
+  padding:0.5em 1em 0.5em 1em;
+  border-radius:100px;
+  border:none;
+  font-size:2em;
+  position:relative;
+  cursor:pointer;
+  height: 20px;
+  width:30px;
+  overflow:hidden;
+  transition:transform 0.1s;
+  z-index:1; 
+}
+#example-email {
+  margin-left: 430px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 4px;
+  padding-right: 3px;
+}  
+#guarantee {
+  font-size: 20px;
+}
+#join {
+  font-weight:bold;
+  margin-left: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.buy {
+  color:#f06e9c;
+  margin-top: 10px;
+  margin-bottom:30px;
+  font-style: Lato, sans serif;
+}
+#images {
+  margin-top: 30px;
+  margin-left:20px;
+}
+.container {
+  display:inline-block;
+}
+#second {
+  margin-top: 100px;
+}
+
+
