@@ -3,25 +3,35 @@
 body {
     font-family: 'Source Sans Pro ', sans-serif;
     color: white;
-    background-color: #ff00ff;
+    background-color: #FF007F;
 }
-
+ 
+ 
+.bun {
+    color: #D9027D;
+}
 
 h1,
 h2,
 h3,
 .card-body > .card-title {
     font-family: 'Lato';
+    color: #D9027D;
 }
 
-
+.carousel {
+    background-color: #FF007F;
+    color: white;
+    font-family: 'Lato',
+}
 .card-title {
     font-weight: 500;
-    font-size: 1.25rem;
+    font-size: 1.50rem;
+    font-family: 'Lato';
 }
 
 h2 {
-    color: #ff00ff;
+    color: white;
 }
 
 .card-img-overlay .card-title {
@@ -46,15 +56,19 @@ h2 {
     margin-right: 2rem;
 }
 
+p {
+    color:#FF007F;
+}
 
-navbar {
-    background-color: #520326;
+.navbar-dark {
+    background-color: #D9027D;
     color: white;
     font-family: "Source Sans Pro", sans serif;
     font-size: 16px;
     margin-bottom: 2rem;
     min-height: 8rem;
 }
+
 
 .page-enter {
     opacity: 0;
@@ -78,13 +92,12 @@ navbar {
 
 
 
-header {
-    color: #ff00ff;
+Header {
+    background-color: #FF007F;
+    color: white;
 
 }
-#foot {
-    color: white;
-}
+
 
 .birthday {
     color: #f06e9c;
@@ -111,5 +124,5 @@ header {
 
 
 h3 {
-    color: #ff00ff;
+    color: white;
 }

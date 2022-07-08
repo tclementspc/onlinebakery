@@ -2,9 +2,11 @@ import { Col } from 'reactstrap';
 import Comment from './Comment';
 import { selectCommentsByRollId } from './commentsSlice';
 import CommentForm from './CommentForm';
+import { useSelector } from 'react-redux';
+
 
 const CommentsList = ({rollId}) => {
-   const comments = selectCommentsByRollId(rollId);
+   const comments = useSelector(selectCommentsByRollId(rollId));
 
    if (comments && comments.length > 0) {
     return (
@@ -19,6 +21,7 @@ const CommentsList = ({rollId}) => {
         </Col>
     );
    }
+
    return (
     <Col md='5' className='m-1'>
         There are no comments for this roll.

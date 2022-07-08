@@ -17,7 +17,7 @@ const RollsDetailPage = () => {
         <Container>
             <Row>
                 <RollsDetail roll={roll} />
-                <CommentsList rollId={rollId} />
+                <CommentsList className='textcolor' rollId={rollId} />
             </Row>
         </Container>
     )

@@ -7,10 +7,10 @@ const ContactPage = () => {
     
     return (
         <Container>
-            <Header current='Contact' />
+    
                 <Row className='row-content align-items=center'>
                     <Col sm='4'>
-                        <h5>Our Address</h5>
+                        <h5 className='location'>Our Address</h5>
                         <address>
                             Decadent Rolls
                             <br />
@@ -25,7 +25,7 @@ const ContactPage = () => {
                             role='button'
                             className='btn btn-link'
                             href='tel:+12065551234'
-                    >
+                        >
                             <i className='fa fa-phone' /> 1-206-555-1234
                         </a>
                         <br />
@@ -42,7 +42,7 @@ const ContactPage = () => {
 
                 <Row className='row-content align-items-center'>
                     <Col xs='12'>
-                        <h2>Send Us Your Feedback</h2>
+                        <h2 className='responses'>Send Us Your Feedback</h2>
                         <hr />
 
                     </Col>

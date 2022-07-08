@@ -13,16 +13,16 @@ import { NavLink } from 'react-router-dom';
 
 const Header = () => {
     const [menuOpen, setMenuOpen] = useState(false);
+    
     return (
-        <Navbar  sticky='top' expand='md'>
-            <NavbarBrand className='ms-5' href='/'>
+        <Navbar dark className='navigation' sticky='top' expand='md'>
+            <NavbarBrand>
 
               <h1 className='mt-1'>DECADENT ROLLS</h1>
             </NavbarBrand>
 
             <NavbarToggler onClick={() => setMenuOpen(!menuOpen)} />
             <Collapse isOpen={menuOpen} navbar>
-
 
                 <Nav className='ms-auto' navbar>
                     <NavItem>
@@ -42,7 +42,7 @@ const Header = () => {
                     </NavItem>
                     <NavItem>
                         <NavLink className='nav-link' to='/cart'>
-                            <i class="fa fa-shopping-cart" /> Your Cart
+                            <i className="fa fa-shopping-cart" /> Your Cart
                         </NavLink>  
                     </NavItem>
                 </Nav>

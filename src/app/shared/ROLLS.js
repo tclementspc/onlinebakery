@@ -1,15 +1,15 @@
 import originalcinnamon from '../assets/images/originalcinnamon.jpg';
 import junredvelvet from '../assets/images/junredvelvet.jpg';
 import oreothumbnail from '../assets/images/oreothumbnail.jpg';
-import cookiemonstersideview from '../assets/images/cookiemonstersideview.jpg';
-import bestbirthday from '../assets/images/bestbirthday.jpg';
+import goodcookiemonster from '../assets/images/goodcookiemonster.jpeg';
+import julbirthday from '../assets/images/julbirthday.jpg';
 
 export const ROLLS = [
     {
         id: 0,
         name: 'Original Cinnamon Roll',
         image: originalcinnamon,
-        description: 'This roll is soft and packed with cinnamon, brown sugar with an extra touch of ooey goodness from the cream cheese icing.',
+        description: 'This roll is packed with cinnamon and brown sugar and topped with delicious cream cheese icing.',
         cost: 30, 
     },
     {
@@ -23,21 +23,21 @@ export const ROLLS = [
         id: 2,
         name: 'Oreo Cookie Roll',
         image: oreothumbnail,
-        description: 'We believe that you should never compromise on flavor when it comes to good food so we added extra Oreos to the recipe.',
+        description: 'We believe you should never compromise on flavor when it comes to food, so we added extra Oreos on top.',
         cost: 33,
     },
     {
         id: 3,
         name: 'Cookie Monster Roll',
-        image: cookiemonstersideview,
-        description: 'C is for cookie and this Cookie Monster Roll is for you!', 
+        image: goodcookiemonster,
+        description: 'C- is for cookie and this Cookie Monster Roll is just for you!', 
         cost: 33,
     },
     {
         id: 4,
         name: 'Birthday Sprinkles Roll',
-        image: bestbirthday,
-        description: 'Fluffy rolls filled with birthday cake filling and topped with vanilla icing and sprinkles add a warm touch to a special birthday.',
+        image: julbirthday,
+        description: 'Fluffy rolls topped vanilla icing and sprinkles add a warm touch to a special birthday.',
         cost: 35,
     },        
 ];

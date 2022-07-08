@@ -1,5 +1,5 @@
 import { Container } from "reactstrap";
-import Header from '../components/Header';
+// import Header from '../components/Header';
 import RollsList from "../features/rolls/RollsList";
 
 
@@ -9,7 +9,6 @@ const RollsDirectoryPage = () => {
   // const selectedCampsite = selectCampsiteById(campsiteId);
   return (
     <Container>
-        <Header current='Shop' />
         <RollsList />
     </Container>
   );

@@ -13,11 +13,12 @@ const rollsSlice = createSlice({
 export const rollsReducer = rollsSlice.reducer;
 
 export const selectAllRolls = (state) => {
+    console.log(state);
     return state.rolls.rollsArray;
 };
 
 export const selectRollById = (id) => (state) => {
-    return state.rolls.rollsArray.find(
-        (roll) => roll.id === parseInt(id)
+    return state.rolls.rollsArray.find((roll) => roll.id === parseInt(id)
     );
 };
+

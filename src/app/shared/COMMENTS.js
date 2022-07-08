@@ -5,7 +5,7 @@ export const COMMENTS = [
         rating: 5,
         text: 'I already need to order more.',
         author: 'Simon Hunt',
-        date: '2022-03-18T16:30Z'
+        date: '2018-10-25T16:30Z'
     },
     {
         id: 1,
@@ -13,7 +13,7 @@ export const COMMENTS = [
         rating: 4,
         text: 'UPS smashed my box of goodies. They shipped me another order free of charge!',
         author: 'Zandra Katherine',
-        date: '2021-06-17T03:33Z'
+        date: '2017-06-17T03:33Z'
     },
     {
         id: 2,
@@ -51,9 +51,9 @@ export const COMMENTS = [
         id: 6,
         rollId: 4,
         rating: 5,
-        text: 'These remind me of granny.',
+        text: 'These rolls were a big hit at my office.',
         author: 'McKenzie Sebastian',
-        date: '2019-02-18T18:12Z'
+        date:  '2019-02-18T18:12Z'
     },
     {
         id: 7,
@@ -61,7 +61,7 @@ export const COMMENTS = [
         rating: 5,
         text: 'I loved them so much that I could not share.',
         author: 'Brennen Ech',
-        date: '2021-08-04T20:11Z'
+        date: '2019-08-04T20:11Z'
     },
     {
         id: 8,
@@ -69,7 +69,7 @@ export const COMMENTS = [
         rating: 4,
         text: "Moist and delicious.",
         author: 'Amy Keophilavong',
-        date: '2020-07-23T19:44Z'
+        date: '2018-07-23T19:44Z'
     },
     {
         id: 9,
@@ -85,7 +85,7 @@ export const COMMENTS = [
         rating: 5,
         text: 'My sweet tooth was made happy!',
         author: 'Olaf the Snowman',
-        date: '2022-02-18T18:12Z'
+        date: '2019-02-18T18:12Z'
     },
     {
         id: 11,
@@ -131,7 +131,7 @@ export const COMMENTS = [
         id: 16,
         rollId: 2,
         rating: 5,
-        text: 'Excellent site to recharge from the city.',
+        text: 'Will be ordering again for special birthday gifts.',
         author: 'Amy Keophilavong',
         date: '2018-07-23T19:44Z'
     },
@@ -155,7 +155,7 @@ export const COMMENTS = [
         id: 19,
         rollId: 3,
         rating: 5,
-        text: "The photos don't do justice to this wonderful roll.",
+        text: "The photos do not do justice to this wonderful roll.",
         author: 'Minae Lee',
         date: '2019-02-18T18:12Z'
     }

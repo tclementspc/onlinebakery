@@ -2,6 +2,8 @@ import { COMMENTS } from '../../app/shared/COMMENTS';
 
 import { createSlice } from '@reduxjs/toolkit';
 
+
+
 const initialState = {
     commentsArray: COMMENTS
 };

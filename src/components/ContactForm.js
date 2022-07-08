@@ -9,9 +9,10 @@ const ContactForm = () => {
         console.log('in JSON format:', JSON.stringify(values));
         resetForm();
     }
-
+    
 
     return (
+
         <Formik
             initialValues={{
                 firstName: '',
@@ -25,6 +26,7 @@ const ContactForm = () => {
             onSubmit={handleSubmit}
             validate={validateContactForm}
         >
+
             <Form>
                 <FormGroup row>
                     <Label htmlFor='firstName' md='2'>

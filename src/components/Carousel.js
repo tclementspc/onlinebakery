@@ -1,143 +1,106 @@
-import { Carousel, CarouselCaption, CarouselControl, CarouselItem, CarouselIndicators } from "reactstrap";
-import originalcinnamon from '../app/assets/images/originalcinnamon.jpg';
-import oreothumbnail from '../app/assets/images/oreothumbnail.jpg';
-import junredvelvet from '../app/assets/images/junredvelvet.jpg';
-import goodcookiemonster from '../app/assets/images/goodcookiemonster.jpeg';
-import junbirthday from '../app/assets/images/junbirthday.jpg';
+import React, { useState } from 'react';
+import Carousel from 'react-bootstrap/Carousel';
+import { images } from "../Helpers/CarouselData";
 
 
-export const Carousel = () => {
 
-    return (
+const ControlledCarousel = () => {
+  const [index, setIndex] = useState(0);
 
-<Carousel
-  activeIndex={0}
-  next={function noRefCheck(){}}
-  previous={function noRefCheck(){}}
->
-  <CarouselIndicators
-    activeIndex={0}
-    items={[
-      {
-        altText: 'Slide 1',
-        caption: 'Original Cinnamon Roll',
-        key: 1,
-        // src: '../app/assets/images/originalcinnamon.jpg',
-        src: originalcinnamon,
-      },
-      {
-        altText: 'Slide 2',
-        caption: 'Oreo Cookie Roll',
-        key: 2,
-        // src: 'https://picsum.photos/id/456/1200/600'
-        src: oreothumbnail,
-      },
-      {
-        altText: 'Slide 3',
-        caption: 'Red Velvet Roll',
-        key: 3,
-        // src: 'https://picsum.photos/id/678/1200/600'
-        src: junredvelvet,
-      },
-      {
-        altText: 'Slide 4',
-        caption: 'Cookie Monster Roll',
-        key: 4,
-        // src: 'https://picsum.photos/id/678/1200/600'
-        src: goodcookiemonster,
-      },
-      {
-        altText: 'Slide 5',
-        caption: 'Birthday Cake Roll',
-        key: 5,
-        // src: 'https://picsum.photos/id/678/1200/600'
-        src: junbirthday,
-      }
+  const handleSelect = (selectedIndex, e) => {
+    setIndex(selectedIndex);
+  };
 
-    ]}
-    onClickHandler={function noRefCheck(){}}
-  />
-  <CarouselItem
-    onExited={function noRefCheck(){}}
-    onExiting={function noRefCheck(){}}
-  >
-    <img
-      alt="Slide 1"
-    //   src="https://picsum.photos/id/123/1200/600"
-         src='originalcinnamon'
-    />
-    <CarouselCaption
-      captionHeader="Original Cinnamon Roll"
-      captionText="$30 per dozen"
-    />
-  </CarouselItem>
-  <CarouselItem
-    onExited={function noRefCheck(){}}
-    onExiting={function noRefCheck(){}}
-  >
-    <img
-      alt="Slide 2"
-    //   src="https://picsum.photos/id/456/1200/600"
-         src='oreothumbnail'
-    />
-    <CarouselCaption
-      captionHeader="Oreo Cookie Roll"
-      captionText="$33 per dozen"
-    />
-  </CarouselItem>
-  <CarouselItem
-    onExited={function noRefCheck(){}}
-    onExiting={function noRefCheck(){}}
-  >
-    <img
-      alt="Slide 3"
-    //   src="https://picsum.photos/id/678/1200/600"
-         src='junredvelvet'
-    />
-    <CarouselCaption
-      captionHeader="Red Velvet Roll"
-      captionText="$30 per dozen"
-    />
-  </CarouselItem>
-  <CarouselItem
-    onExited={function noRefCheck(){}}
-    onExiting={function noRefCheck(){}}
-  >
-    <img
-      alt="Slide 4"
-    //   src="https://picsum.photos/id/678/1200/600"
-         src='goodcookiemonster'
-    />
-    <CarouselCaption
-      captionHeader="Cookie Monster Roll"
-      captionText="$33 per dozen"
-    />
-  </CarouselItem>
-  <CarouselItem
-    onExited={function noRefCheck(){}}
-    onExiting={function noRefCheck(){}}
-  >
-    <img
-      alt="Slide 5"
-    //   src="https://picsum.photos/id/678/1200/600"
-         src='junbirthday'
-    />
-    <CarouselCaption
-      captionHeader="Birthday Sprinkles Roll"
-      captionText="$35 per dozen"
-    />
-  </CarouselItem>
+  return (
+ 
+    <Carousel activeIndex={index} onSelect={handleSelect}>
+      <Carousel.Item>
+        <img
+          className="d-block w-60"
+          src={images[index].img}
+          alt="First slide"
+        />
+        <Carousel.Caption>
+          <h3>Original Cinnamon Roll</h3>
+          <p>$30 per dozen/$15 half-dozen</p>
+        </Carousel.Caption>
+      </Carousel.Item>
 
-  <CarouselControl
-    direction="prev"
-    directionText="Previous"
-    onClickHandler={function noRefCheck(){}}
-  />
-  <CarouselControl
-    direction="next"
-    directionText="Next"
-    onClickHandler={function noRefCheck(){}}
-  />
-</Carousel>
-    );
-};
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src={images[index].img}
+          alt="Second slide"
+        />
+
+        <Carousel.Caption>
+          <h3>Oreo Cinnamon Roll</h3>
+          <p>$33 per dozen/$16 half-dozen</p>
+        </Carousel.Caption>
+      </Carousel.Item>
+
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src={images[index].img}
+          alt="Third slide"
+        />
+
+        <Carousel.Caption>
+          <h3>Red Velvet Cinnamon Roll</h3>
+          <p>
+            $32 per dozen/$16 per half dozen.
+          </p>
+        </Carousel.Caption>
+      </Carousel.Item>
+
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src={images[index].img}
+          alt="Fourth slide"
+        />
+
+        <Carousel.Caption>
+          <h3>Cookie Monster Roll</h3>
+          <p>
+            $33 per dozen/$16 per half dozen.
+          </p>
+        </Carousel.Caption>
+      </Carousel.Item>
+
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src={images[index].img}
+          alt="Fifth slide"
+        />
+
+        <Carousel.Caption>
+          <h3>Birthday Cake Roll</h3>
+          <p>
+            $34 per dozen/$17 per half dozen.
+          </p>
+        </Carousel.Caption>
+      </Carousel.Item>
+
+    </Carousel>
+
+  );
+}
+
+export default ControlledCarousel;
+
+
+
+
+
+
+
+
+
+
+
+
+
+

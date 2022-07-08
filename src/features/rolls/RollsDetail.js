@@ -1,8 +1,8 @@
-import { Card, CardImg, CardText, CardBody, Col } from 'reactstrap';
+import { Card, CardImg, CardText, CardBody, Col, Button } from 'reactstrap';
 
 
 
-const RollsDetail = ( {roll} ) => {
+const RollsDetail = ({roll}) => {
     const { image, name, description, cost } = roll;
 
     return (
@@ -10,9 +10,11 @@ const RollsDetail = ( {roll} ) => {
             <Card>
                 <CardImg top src={image} alt={name} />
                 <CardBody>
-                    <CardText>{description}</CardText>
-                    <CardText>{cost}</CardText>
+                    <CardText className='textcolor'>{description}</CardText>
+                    <CardText className='textcolor'>{cost}</CardText>
+                    <CardText className='textcolor'>dollars per dozen</CardText>
                 </CardBody>
+                <Button variant="warning" type='submit' active>Buy</Button>{' '}
             </Card>
         </Col>
     );

@@ -1,24 +1,31 @@
 import { useState } from 'react';
 import { Button, Modal, ModalHeader, ModalBody, FormGroup, Label } from 'reactstrap';
 import { Formik, Field, Form, ErrorMessage } from 'formik';
-import { validateCommentForm } from '../../utils/validateCommentForm';
+import { validateCommentForm } from '../../utils/validateCommentForm'
+import { useDispatch } from 'react-redux';
+
+import { addComment } from './commentsSlice';
+
 
 const CommentForm = ({rollId}) => {
 
     const [modalOpen, setModalOpen] = useState(false);
     
+    const dispatch = useDispatch();
+
     const handleSubmit = (values) => {
         const comment = {
             rollId: parseInt(rollId),
             rating: values.rating,
             author: values.author,
-            text: values.commentText
+            text: values.commentText,
+            date: new Date(Date.now()).toISOString()
         };
         console.log({comment});
+        dispatch(addComment(comment));
         setModalOpen(false);
        
     };
-   
     
     return (
 

@@ -58,10 +58,8 @@ h6 {
   margin-top: 20px;
   margin-bottom: 30px;
 }
-#pictures {
-  margin-top: 20px;
-  margin-bottom: 30px;
-}
+
+
 #selection {
   color:#f4eb49;
   font-style: Lato;
@@ -76,23 +74,15 @@ h6 {
 
 .navbar-dark { 
   color: white;
-  font-family: "Source Sans Pro", sans serif;
+  font-family: "Lobster cursive", "Source Sans Pro", sans serif;
   font-size: 16px;
-  background-color: #55071d;
+  background-color: #D9027D;
 }
 header {
   color: #f06e9c;
   padding-bottom: 100px;
 }
-#cake {
-  color: yellow;
-}
-#sale {
-  color: #f06e9c;
-}
-#return {
-  color: white;
-}
+
 #foot {
   color: white;
 }
@@ -159,6 +149,42 @@ h3 {
 }
 /* I wanted the p element to be a different color and smaller in the birthdayclubdiv */
 
+.appreciation {
+  font-family: Ledger;
+  font-size: 30px;
+  font-weight: 700px;
+  margin-top: 30px
+}
+
+.delivery {
+  font-size: 25px;
+  font-family: Ledger;
+  font-weight: 700px;
+  color:#D9027D;
+  margin-top: 30px;
+  margin-bottom: 100px
+}
+
+
+.location {
+    color:#003399;
+    font-size: 30px;
+    font-weight: 700px;
+    font-family: Ledger
+}
+
+.responses {
+  color: #003399;
+  font-weight: 700px
+}
+
+.card-title {
+  color: yellow;
+  font-size: 27px; 
+  font-weight: 800px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
 #shopPromotion, h2 {
   font-family: Lato;
   color: #f4eb49;
@@ -180,62 +206,23 @@ p {
   font-size: 16px;
 }
 
-.carouselSlide {
-  background-color: #3d131f;
+
+.textcolor {
+  color: #D9027D;
+  font-size: 20px;
+  font-weight: 700p
+
+}
+
+#ControlledCarousel {
+  background-color: #FF00FF;
 }
 header {
-  font-family: Limelight;
+  font-family: Lobster cursive;
   color: white;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-#submitShopbtn {
-  background-color: #f06e9c;
-  color: white;
-  font-weight: bold;
-}
-#inputShopbtn {
-  background-color: red; 
-  color: #f06e9c;
-  font-size: 20px;
-}
-#shopNowbtn {
-  margin-top: 100px;
-  color:#f06e9c
-}
-#searchShopbtn {
-  font-weight: bold;
-  background-color: white;
-  color: #55071d;
-}
-#search {
-  color: white;
-}
-
-
-h3 {
-  font-family: Lato, sans serif;
-  color: green;
-  font-size: 25px;
-  font-weight:200px;
-}
-#shopPhotos {
-  padding-right: 8px;
-}
-#browseButton {
-  padding: white;
-  color: black;
-  font-family: Source Sans Pro, sans serif;
-  font-size: 18px;
-  margin-top: 20px;
-  margin-bottom: 30px;
-
-}
-.inputBox {
-  color: #3d131f;
-  font-family: Source Sans Pro;
-  font-size: 18px;
 }
 span {
   font-family: Lato, sans serif;
@@ -290,18 +277,7 @@ h5 {
   display: inlne-block;
   justify-content: center;
 }
-.thumbnail {
-  width: 165px;
-  display: block;
-  vertical-align: text-bottom;
-}
-#slogan {
-  color: #f06e9c;
-  font-style: Sansita;
-}
-#decadentslogan {
-  padding-top: 30px;
-}
+
 #birthdayicon {
   padding-top: 20px;
 }
@@ -311,7 +287,7 @@ h5 {
 } 
 h3 {
   font-style: Ledger, sans serif;
-  color: #f06e9c;
+  color: white;
 } 
 .addtocart {
   color: black;
@@ -328,37 +304,13 @@ h3 {
   transition:transform 0.1s;
   z-index:1; 
 }
-#example-email {
-  margin-left: 430px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  padding-left: 4px;
-  padding-right: 3px;
-}  
-#guarantee {
-  font-size: 20px;
-}
-#join {
-  font-weight:bold;
-  margin-left: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-.buy {
-  color:#f06e9c;
-  margin-top: 10px;
-  margin-bottom:30px;
-  font-style: Lato, sans serif;
-}
+
 #images {
   margin-top: 30px;
   margin-left:20px;
 }
 .container {
   display:inline-block;
-}
-#second {
-  margin-top: 100px;
 }
 
 
