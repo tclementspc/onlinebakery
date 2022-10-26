@@ -1,8 +1,6 @@
-import React, { useState } from 'react';
-import Carousel from 'react-bootstrap/Carousel';
+import React, { useState } from "react";
+import Carousel from "react-bootstrap/Carousel";
 import { images } from "../Helpers/CarouselData";
-
-
 
 const ControlledCarousel = () => {
   const [index, setIndex] = useState(0);
@@ -12,17 +10,16 @@ const ControlledCarousel = () => {
   };
 
   return (
- 
     <Carousel activeIndex={index} onSelect={handleSelect}>
       <Carousel.Item>
         <img
-          className="d-block w-60"
+          className="d-block w-100"
           src={images[index].img}
           alt="First slide"
         />
         <Carousel.Caption>
-          <h3>Original Cinnamon Roll</h3>
-          <p>$30 per dozen/$15 half-dozen</p>
+          <h4 className="rollName">Original Cinnamon Roll</h4>
+          <p className="cost">$30 per dozen</p>
         </Carousel.Caption>
       </Carousel.Item>
 
@@ -34,8 +31,8 @@ const ControlledCarousel = () => {
         />
 
         <Carousel.Caption>
-          <h3>Oreo Cinnamon Roll</h3>
-          <p>$33 per dozen/$16 half-dozen</p>
+          <h4 className="rollName">Cookies n Cream Roll</h4>
+          <p className="cost">$33 per dozen</p>
         </Carousel.Caption>
       </Carousel.Item>
 
@@ -47,10 +44,8 @@ const ControlledCarousel = () => {
         />
 
         <Carousel.Caption>
-          <h3>Red Velvet Cinnamon Roll</h3>
-          <p>
-            $32 per dozen/$16 per half dozen.
-          </p>
+          <h4 className="rollName">Red Velvet Cinnamon Roll</h4>
+          <p className="cost">$32 per dozen</p>
         </Carousel.Caption>
       </Carousel.Item>
 
@@ -62,10 +57,8 @@ const ControlledCarousel = () => {
         />
 
         <Carousel.Caption>
-          <h3>Cookie Monster Roll</h3>
-          <p>
-            $33 per dozen/$16 per half dozen.
-          </p>
+          <h4 className="rollName">Cookie Monster Roll</h4>
+          <p className="cost">$33 per dozen</p>
         </Carousel.Caption>
       </Carousel.Item>
 
@@ -77,30 +70,23 @@ const ControlledCarousel = () => {
         />
 
         <Carousel.Caption>
-          <h3>Birthday Cake Roll</h3>
-          <p>
-            $34 per dozen/$17 per half dozen.
-          </p>
+          <h4 className="rollName">Birthday Cake Roll</h4>
+          <p className="cost">$32 per dozen</p>
         </Carousel.Caption>
       </Carousel.Item>
-
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src={images[index].img}
+          alt="Sixth slide"
+        />
+        <Carousel.Caption>
+          <h4 className="rollName">Outrageous Fudge Roll</h4>
+          <p className="cost">$32 per dozen</p>
+        </Carousel.Caption>
+      </Carousel.Item>
     </Carousel>
-
   );
-}
+};
 
 export default ControlledCarousel;
-
-
-
-
-
-
-
-
-
-
-
-
-
-

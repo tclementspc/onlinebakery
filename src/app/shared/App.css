@@ -1,128 +1,128 @@
-
-
 body {
-    font-family: 'Source Sans Pro ', sans-serif;
-    color: white;
-    background-color: #FF007F;
+  font-family: "Lato", "Source Sans Pro ", sans-serif;
+  background-color: #ff007f;
 }
- 
- 
+#bakeryname {
+  font-size: 16px;
+  color: white;
+  font-weight: bold;
+}
 .bun {
-    color: #D9027D;
+  color: #d9027d;
 }
 
 h1,
 h2,
 h3,
 .card-body > .card-title {
-    font-family: 'Lato';
-    color: #D9027D;
+  font-family: "Montserrat", "Lato";
+  color: #d9027d;
+  font-weight: bold;
 }
 
 .carousel {
-    background-color: #FF007F;
-    color: white;
-    font-family: 'Lato',
+  background-color: #ff007f;
+  font-family: "Montserrat", "Lato";
 }
 .card-title {
-    font-weight: 500;
-    font-size: 1.50rem;
-    font-family: 'Lato';
+  font-weight: 500;
+  font-size: 1.5rem;
+  font-family: "Montserrat", "Lato";
 }
 
 h2 {
-    color: white;
+  color: white;
 }
 
 .card-img-overlay .card-title {
-    color: white;
-    background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .row-content {
-    padding: 50px 0;
-    border-bottom: 1px ridge;
-    min-height: 200px;
+  padding: 50px 0;
+  border-bottom: 1px ridge;
+  min-height: 200px;
 }
 
 .site-footer {
-    background-image: linear-gradient(#cec8ff, white);
-    padding: 20px 0;
-    margin-top: 2rem;
+  background-image: linear-gradient(#cec8ff, white);
+  padding: 20px 0;
+  margin-top: 2rem;
 }
 
 .navbar-brand {
-    max-width: 4rem;
-    margin-right: 2rem;
+  max-width: 1rem;
+  margin-right: 2rem;
+  font-size: 16px;
+  font-weight: bold;
 }
 
 p {
-    color:#FF007F;
+  color: #9f0933;
 }
 
 .navbar-dark {
-    background-color: #D9027D;
-    color: white;
-    font-family: "Source Sans Pro", sans serif;
-    font-size: 16px;
-    margin-bottom: 2rem;
-    min-height: 8rem;
+  background-color: #d9027d;
+  color: white;
+  font-family: "Lato", "Source Sans Pro", sans serif;
+  font-size: 16px;
+  margin-bottom: 1rem;
+  min-height: 4rem;
 }
 
-
 .page-enter {
-    opacity: 0;
-    transform: translateX(-100%);
+  opacity: 0;
+  transform: translateX(-100%);
 }
 
 .page-enter-active {
-    opacity: 1;
-    transform: translateX(0%);
-    transition: 300ms ease-out;
+  opacity: 1;
+  transform: translateX(0%);
+  transition: 300ms ease-out;
 }
 
 .page-exit {
-    opacity: 1;
+  opacity: 1;
 }
 
 .page-exit-active {
-    opacity: 0;
-    transition: 300ms ease-in;
+  opacity: 0;
+  transition: 300ms ease-in;
 }
-
-
 
 Header {
-    background-color: #FF007F;
-    color: white;
-
+  background-color: #ff007f;
+  color: white;
 }
-
 
 .birthday {
-    color: #f06e9c;
-    text-align: center;
-    padding-top: 30px;
+  color: #f06e9c;
+  text-align: center;
+  padding-top: 30px;
 }
 .heart {
-    padding-bottom: 10px;
-    padding-top: 15px;
+  padding-bottom: 10px;
+  padding-top: 15px;
 }
 #motto {
-    color: #f06e9c;
-    padding-bottom: 60px;    
+  color: #f06e9c;
+  padding-bottom: 60px;
 }
 #firstpic {
-    padding-top: 40px;
+  padding-top: 40px;
 }
 #yourCart {
-    color: white;
-    background-color: #f06e9c;
-    font-style: Source Sans Pro, sans serif;
-    /* font-size: 14px; */
+  color: white;
+  background-color: #f06e9c;
+  font-style: Source Sans Pro, sans serif;
+  /* font-size: 14px; */
 }
 
-
 h3 {
-    color: white;
+  color: white;
+}
+.rollName {
+  color: white;
+  font-size: 16px;
 }
