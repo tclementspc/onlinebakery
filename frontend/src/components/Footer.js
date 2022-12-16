@@ -7,11 +7,14 @@ const Footer = () => {
     <footer className="site-footer">
       <Container>
         <Row>
-          <Col xs={{ size: 3, offset: 1 }} sm="2">
+          <Col xs={{ size: 4, offset: 1 }} sm="2">
             <h5>Links</h5>
             <ul className="list-unstyled">
               <li>
                 <Link to="/">Home</Link>
+              </li>
+              <li>
+                <Link to="/about">About</Link>
               </li>
 
               <li>
@@ -27,7 +30,7 @@ const Footer = () => {
               </li>
             </ul>
           </Col>
-          <Col xs="9" sm="5" className="socialmedia">
+          <Col xs="8" sm="4" md="6" className="text-center">
             <h5>Social</h5>
             <a
               className="btn btn-social-icon btn-instagram"
@@ -54,7 +57,7 @@ const Footer = () => {
               <i className="fa fa-youtube" />
             </a>
           </Col>
-          <Col className="text-center">
+          <Col md="3" sm="4" xs="8" className="phone">
             <a role="button" className="btn btn-link" href="tel:+12065551234">
               <i className="fa fa-phone" /> 1-206-555-1234
             </a>

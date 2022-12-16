@@ -10,7 +10,7 @@ import cartReducer from "../features/cartSlice";
 
 export const store = configureStore({
   reducer: {
-    comments: commentsReducer,
+    //   comments: commentsReducer,
     products: productsReducer,
     cart: cartReducer,
     [productsApi.reducerPath]: productsApi.reducer,

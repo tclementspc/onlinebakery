@@ -10,7 +10,7 @@ const products = [
   },
   {
     id: 1,
-    name: "Red Velvet Roll",
+    name: "Red Velvet Cinnamon Roll",
     image:
       "https://res.cloudinary.com/dgrhzrzr3/image/upload/v1667678971/onlinebakery/red1_nzxizc.jpg",
     description:

@@ -7,12 +7,12 @@ import Header from "../src/components/Header";
 //import RollsDirectoryPage from "../src/pages/RollsDirectoryPage";
 import Footer from "../src/components/Footer";
 //import RollsDetailPage from "../src/pages/RollsDetailPage";
-// import AboutPage from './pages/AboutPage';
+
 //header contains navbar which should keep track of items in cart
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import CartPage from "./pages/CartPage";
-
+import AboutPage from "./pages/AboutPage";
 import ProductDirectoryPage from "./pages/ProductDirectoryPage";
 
 function App() {
@@ -23,6 +23,7 @@ function App() {
 
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<AboutPage />} />
         <Route path="contact" element={<ContactPage />} />
         <Route path="/shop" element={<ProductDirectoryPage />} />
         <Route path="/cart" element={<CartPage />} />

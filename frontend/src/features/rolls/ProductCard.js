@@ -7,15 +7,15 @@ const ProductCard = ({ product }) => {
   const { id, name, image, cost } = product;
 
   return (
-    <Link to={`${id}`} style={{ textDecoration: "none" }}>
-      <Card className="prices">
-        <CardImg width="100%" src={image} alt={name} />
-        <CardImgOverlay>
-          <CardTitle className="bun">{name}</CardTitle>
-        </CardImgOverlay>
-        <CardText className="textcolor">${cost} dollars per dozen</CardText>
-      </Card>
-    </Link>
+    //  <Link to={`${id}`} style={{ textDecoration: "none" }}>
+    <Card className="prices">
+      <CardImg width="100%" src={image} alt={name} />
+      <CardImgOverlay>
+        <CardTitle className="bun">{name}</CardTitle>
+      </CardImgOverlay>
+      <CardText className="textcolor">${cost} dollars per dozen</CardText>
+    </Card>
+    //   </Link>
   );
 };
 

@@ -9,6 +9,7 @@ import {
 } from "reactstrap";
 import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
+import decbakerylogo4 from "../app/assets/images/decbakerylogo4.jpg";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -19,7 +20,7 @@ const Header = () => {
     <Navbar dark className="navigation" sticky="top" expand="md">
       <NavbarBrand>
         <h2 className="mt-1" id="bakeryname">
-          DECADENT BAKERY
+          Decadent Bakery
         </h2>
       </NavbarBrand>
 
@@ -32,8 +33,13 @@ const Header = () => {
             </NavLink>
           </NavItem>
           <NavItem>
+            <NavLink className="nav-link" to="/about">
+              <i className="fa fa-info-circle fa-lg" /> About
+            </NavLink>
+          </NavItem>
+          <NavItem>
             <NavLink className="nav-link" to="/shop">
-              <i className="fa fa-list fa-lg" /> Menu
+              <i className="fa fa-list fa-lg" /> Shop
             </NavLink>
           </NavItem>
           <NavItem>
@@ -45,7 +51,7 @@ const Header = () => {
             <NavLink className="nav-link" to="/cart">
               <i className="fa fa-shopping-cart" /> Your Cart
               <span id="bag-quantity">
-                <span>{cartTotalQuantity}</span>
+                <span className="cart-totalQ">{cartTotalQuantity}</span>
               </span>
             </NavLink>
           </NavItem>

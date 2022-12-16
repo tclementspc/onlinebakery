@@ -36,7 +36,7 @@ const Cart = () => {
 
   return (
     <div className="cart-container">
-      <h3 className="begin-cart">Shopping Cart</h3>
+      <h2 className="begin-cart">Shopping Cart</h2>
       {cart.cartItems.length === 0 ? (
         <div className="cart-empty">
           <p className="no-products">Your cart is currently empty</p>
@@ -56,24 +56,26 @@ const Cart = () => {
                 />
               </svg>
               <span className="begin-shopping">
-                Click here to shop or on the "Menu" tab
+                Click here to start shopping
               </span>
             </Link>
           </div>
         </div>
       ) : (
-        <div className="titles">
-          <h3 className="product-title">Product</h3>
-          <h3 className="price">Price</h3>
-          <h3 className="quantity">Quantity</h3>
-          <h3 className="total">Total</h3>
+        <div>
+          <div className="titles">
+            <h3 className="product-title">Product</h3>
+            <h3 className="price">Price</h3>
+            <h3 className="quantity">Quantity</h3>
+            <h3 className="total">Total</h3>
+          </div>
           <div className="cart-items">
             {cart.cartItems?.map((cartItem) => (
               <div className="cart-item" key={cartItem.id}>
                 <div className="cart-product">
                   <img src={cartItem.image} alt={cartItem.name} />
                   <div>
-                    <h3>{cartItem.name}</h3>
+                    <h3 className="product-name">{cartItem.name}</h3>
                     <button onClick={() => handleRemoveFromCart(cartItem)}>
                       Remove
                     </button>
@@ -121,7 +123,9 @@ const Cart = () => {
                       d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"
                     />
                   </svg>
-                  <span>Click to continue shopping</span>
+                  <span className="shop-more">
+                    Click here to continue shopping
+                  </span>
                 </Link>
               </div>
             </div>

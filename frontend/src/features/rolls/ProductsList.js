@@ -32,7 +32,8 @@ const ProductsList = () => {
                 }}
                 type="submit"
                 active
-                className="btn btn-dark"
+                variant="custom"
+                className="btn btn-custom"
               >
                 Add to Cart
               </Button>

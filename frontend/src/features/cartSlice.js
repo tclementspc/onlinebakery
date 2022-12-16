@@ -52,7 +52,7 @@ const cartSlice = createSlice({
         (cartItem) => cartItem.id === action.payload.id
       );
 
-      if (state.cartItems[itemIndex].cartQuantitiy > 1) {
+      if (state.cartItems[itemIndex].cartQuantity > 1) {
         state.cartItems[itemIndex].cartQuantity -= 1;
 
         toast.info(`Decreased ${action.payload.name} cart quantity`, {
