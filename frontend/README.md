@@ -2,6 +2,14 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
 
+## Title and Description of the Application
+
+This is an Online Bakery Application which allows the user to shop at an online store using React. The user will can use the navigation bar or the links to navigate through the bakery store products, the About page and Contact page. The user also can add and delete items to and from shopping cart. The only thing that the user will not be able to do is complete the purchase.
+
+## Credit
+
+This project was created with the assistance of NuCamp Coding Bootcamp resources and Youtuber Charles Chaoo.
+
 ## Available Scripts
 
 In the project directory, you can run:
