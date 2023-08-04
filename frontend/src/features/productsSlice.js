@@ -2,7 +2,7 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
 const initialState = {
-  items: [],
+  productsArray: [],
   status: null,
 };
 
@@ -39,6 +39,8 @@ export const selectAllProducts = (state) => {
   return state.products.items;
 };
 
-export const selectProductsById = (id) => (state) => {
-  return state.products.items.find((item) => item.id === parseInt(id));
+export const selectProductById = (id) => (state) => {
+  return state.products.productsArray.find(
+    (product) => product.id === parseInt(id)
+  );
 };

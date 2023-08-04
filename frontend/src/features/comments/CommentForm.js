@@ -1,111 +1,97 @@
-import { useState } from 'react';
-import { Button, Modal, ModalHeader, ModalBody, FormGroup, Label } from 'reactstrap';
-import { Formik, Field, Form, ErrorMessage } from 'formik';
-import { validateCommentForm } from '../../utils/validateCommentForm'
-import { useDispatch } from 'react-redux';
+import { useState } from "react";
+import {
+  Button,
+  Modal,
+  ModalHeader,
+  ModalBody,
+  FormGroup,
+  Label,
+} from "reactstrap";
+import { Formik, Field, Form, ErrorMessage } from "formik";
+import { validateCommentForm } from "../../utils/validateCommentForm";
+import { useDispatch } from "react-redux";
 
-import { addComment } from './commentsSlice';
+import { addComment } from "./commentsSlice";
 
+const CommentForm = ({ productId }) => {
+  const [modalOpen, setModalOpen] = useState(false);
 
-const CommentForm = ({rollId}) => {
+  const dispatch = useDispatch();
 
-    const [modalOpen, setModalOpen] = useState(false);
-    
-    const dispatch = useDispatch();
-
-    const handleSubmit = (values) => {
-        const comment = {
-            rollId: parseInt(rollId),
-            rating: values.rating,
-            author: values.author,
-            text: values.commentText,
-            date: new Date(Date.now()).toISOString()
-        };
-        console.log({comment});
-        dispatch(addComment(comment));
-        setModalOpen(false);
-       
+  const handleSubmit = (values) => {
+    const comment = {
+      productId: parseInt(productId),
+      rating: values.rating,
+      author: values.author,
+      text: values.commentText,
+      date: new Date(Date.now()).toISOString(),
     };
-    
-    return (
+    console.log({ comment });
+    dispatch(addComment(comment));
+    setModalOpen(false);
+  };
 
-            <>
-                <Button outline onClick={()=> setModalOpen(true)} >
-                    <i className='fa fa-pencil fa-lg' /> Add Comment
-                </Button>
-                <Modal isOpen={modalOpen}>
-                    <ModalHeader toggle={()=> setModalOpen(false)} >
-                        Add Comment
-                                     
-                    </ModalHeader>
-                        <ModalBody>
-                            <Formik validate={validateCommentForm}
-                                initialValues={{
-                                rating: undefined, 
-                                author: '',
-                                commentText: '',
-                            }}
-                                onSubmit={handleSubmit}             
-                            >
-                            <Form>
-                                <FormGroup>
-                                    <Label htmlFor='rating'>
-                                        Rating
-                                    </Label>
-                                    <Field
-                                        name='rating'
-                                        as='select'
-                                        className='form-control'
-                                    >
-                                        <option>Select...</option>
-                                        <option>1</option>
-                                        <option>2</option>
-                                        <option>3</option>
-                                        <option>4</option>
-                                        <option>5</option>
-                                    </Field>
-                                    <ErrorMessage name='rating' />
-                                
-                                </FormGroup>    
+  return (
+    <>
+      <Button outline onClick={() => setModalOpen(true)}>
+        <i className="fa fa-pencil fa-lg" /> Add Comment
+      </Button>
+      <Modal isOpen={modalOpen}>
+        <ModalHeader toggle={() => setModalOpen(false)}>
+          Add Comment
+        </ModalHeader>
+        <ModalBody>
+          <Formik
+            validate={validateCommentForm}
+            initialValues={{
+              rating: undefined,
+              author: "",
+              commentText: "",
+            }}
+            onSubmit={handleSubmit}
+          >
+            <Form>
+              <FormGroup>
+                <Label htmlFor="rating">Rating</Label>
+                <Field name="rating" as="select" className="form-control">
+                  <option>Select...</option>
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                </Field>
+                <ErrorMessage name="rating" />
+              </FormGroup>
 
-                                <FormGroup>
-                                    <Label htmlFor='author'>
-                                        Author
+              <FormGroup>
+                <Label htmlFor="author">Author</Label>
+                <Field
+                  name="author"
+                  placeholder="Your Name"
+                  className="form-control"
+                />
+                <ErrorMessage name="author" />
+              </FormGroup>
+              <FormGroup>
+                <Label htmlFor="commentText">Comment</Label>
+                <Field
+                  name="commentText"
+                  as="textarea"
+                  rows="12"
+                  className="form-control"
+                />
+              </FormGroup>
 
-                                    </Label>
-                                        <Field
-                                        name='author'
-                                        placeholder='Your Name'
-                                        className='form-control'
-                                        />
-                                       <ErrorMessage name='author' /> 
-                                        
-                                </FormGroup>
-                                <FormGroup>
-                                    <Label htmlFor='commentText'>
-                                        Comment
-                                    </Label>
-                                        <Field
-                                        name='commentText'
-                                        as='textarea'
-                                        rows='12'
-                                        className='form-control'
-                                        />
-                                </FormGroup>     
-    
-                                    <Button type='submit' color='warning'>
-                                        Submit
-                                    </Button>    
-                            </Form>
-                        </Formik>
-                    </ModalBody>
-                </Modal>            
-            </>
-        
-    );
+              <Button type="submit" color="warning">
+                Submit
+              </Button>
+            </Form>
+          </Formik>
+        </ModalBody>
+      </Modal>
+    </>
+  );
 };
 
-
 export default CommentForm;
-
-  

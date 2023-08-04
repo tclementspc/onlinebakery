@@ -1,4 +1,4 @@
-/*const comments = [
+const comments = [
   {
     id: 0,
     productId: 0,
@@ -163,10 +163,10 @@
     id: 20,
     productId: 1,
     rating: 5,
-    text: "The photos do not do justice to this wonderful roll.",
+    text: "Be sure to grab milk for extra enjoyment.",
     author: "Cindy Thomas",
     date: "2019-02-18T18:12Z",
   },
 ];
 
-module.exports = comments;*/
+module.exports = comments;

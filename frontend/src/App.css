@@ -232,7 +232,7 @@ h3 {
 .rollName {
   color: yellow;
   font-weight: bold;
-  font-size: 28px;
+  font-size: 26px;
 }
 .cost {
   color: yellow;
@@ -575,6 +575,8 @@ h3 {
 }
 .phone {
   align-items: left;
+  font-size: 12px;
+  /* footer with phone number needs to be smaller */
 }
 .nav-link {
   font-size: 14px;

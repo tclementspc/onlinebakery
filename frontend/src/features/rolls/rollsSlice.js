@@ -11,7 +11,7 @@ const initialState = {
 export const productsFetch = createAsyncThunk(
   "products/productsFetch",
   async () => {
-    const response = await axios.get("http://localhotst:5000/products");
+    const response = await axios.get("http://localhost:5000/products");
     if (!response.ok) {
       return Promise.reject("Unable to fetch, status: " + response.status);
     }

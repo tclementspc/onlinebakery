@@ -1,17 +1,17 @@
-import { COMMENTS } from "../../app/shared/COMMENTS";
+//import { COMMENTS } from "../../app/shared/COMMENTS";
 
-/*import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
 const initialState = {
-  commentsArray: comments,
+  commentsArray: [],
   status: null,
 };
 
 export const commentsFetch = createAsyncThunk(
   "comments/commentsFetch",
   async () => {
-    const response = await axios.get("http://localhost:5000/products");
+    const response = await axios.get("http://localhost:5000/comments");
     return response?.data;
   }
 );
@@ -36,8 +36,8 @@ export const commentsReducer = commentsSlice.reducer;
 
 export const { addComment } = commentsSlice.actions;
 
-export const selectCommentsByRollId = (rollId) => (state) => {
+export const selectCommentsByProductId = (productId) => (state) => {
   return state.comments.commentsArray.filter(
-    (comment) => comment.rollId === parseInt(rollId)
+    (comment) => comment.productId === parseInt(productId)
   );
-};*/
+};

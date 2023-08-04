@@ -12,9 +12,12 @@ import "typeface-open-sans";
 import { BrowserRouter } from "react-router-dom";
 import { productsFetch } from "../src/features/productsSlice";
 import { getTotals } from "./features/cartSlice";
+import { commentsFetch } from "./features/comments/commentsSlice";
 
 store.dispatch(productsFetch());
 store.dispatch(getTotals());
+store.dispatch(commentsFetch());
+/* added and imported 7/28/2023 b/c need to fetch the comments from the backend */
 
 const container = document.getElementById("root");
 const root = createRoot(container);

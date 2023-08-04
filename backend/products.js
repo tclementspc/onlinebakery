@@ -19,7 +19,7 @@ const products = [
   },
   {
     id: 2,
-    name: "Cookies n Cream Roll",
+    name: "Cookies-n-Cream Roll",
     image:
       "https://res.cloudinary.com/dgrhzrzr3/image/upload/v1667679025/onlinebakery/oreo2_kyi0gw.jpg",
     description:
@@ -46,7 +46,7 @@ const products = [
   },
   {
     id: 5,
-    name: "Outrageous Fudge Roll",
+    name: "Outrageously Fudge Roll",
     image:
       "https://res.cloudinary.com/dgrhzrzr3/image/upload/v1667679199/onlinebakery/fudgerollRS_tkcriq.jpg",
     description:

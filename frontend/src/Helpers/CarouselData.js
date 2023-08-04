@@ -12,8 +12,8 @@ export const images = [
     img: newOriginal,
   },
   {
-    title: "Cookies n Cream Roll",
-    subitle: "Cookies n Cream Roll",
+    title: "Cookies-n-Cream Roll",
+    subitle: "Cookies-n-Cream Roll",
     img: oreo2,
   },
   {
@@ -32,8 +32,8 @@ export const images = [
     img: newBirthday4,
   },
   {
-    title: "Outrageous Fudge Roll",
-    subtitle: "Outrageous Fudge Roll",
+    title: "Outrageously Fudge Roll",
+    subtitle: "Outrageously Fudge Roll",
     img: fudgerollRS,
   },
 ];
