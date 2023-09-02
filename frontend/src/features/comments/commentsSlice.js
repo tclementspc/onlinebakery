@@ -3,11 +3,6 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
-const initialState = {
-  commentsArray: [],
-  status: null,
-};
-
 export const commentsFetch = createAsyncThunk(
   "comments/commentsFetch",
   async () => {
@@ -15,6 +10,11 @@ export const commentsFetch = createAsyncThunk(
     return response?.data;
   }
 );
+
+const initialState = {
+  commentsArray: [],
+  status: null,
+};
 
 const commentsSlice = createSlice({
   name: "comments",

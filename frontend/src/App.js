@@ -15,7 +15,7 @@ import CartPage from "./pages/CartPage";
 import AboutPage from "./pages/AboutPage";
 import ProductDirectoryPage from "./pages/ProductDirectoryPage";
 import ProductDetailPage from "./pages/ProductDetailPage";
-//putting in the ProductDetailPage to pull out individual productId and comments
+//putting in the ProductDetailPage to pull out individual productId ne line below
 
 function App() {
   return (
@@ -24,14 +24,14 @@ function App() {
       <Header />
 
       <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="about" element={<AboutPage />} />
-        <Route path="contact" element={<ContactPage />} />
-        <Route path="/shop" element={<ProductDirectoryPage />} />
-
-        <Route path="shop/:productId" element={<ProductDetailPage />} />
+        <Route path="/product/:slug" element={<ProductDetailPage />} />
+        <Route path="products" element={<ProductDirectoryPage />} />
         <Route path="/cart" element={<CartPage />} />
+        <Route path="contact" element={<ContactPage />} />
+        <Route path="about" element={<AboutPage />} />
+        <Route exact path="/" element={<HomePage />} />
       </Routes>
+
       <Footer />
     </div>
   );

@@ -1,26 +1,29 @@
 import { configureStore } from "@reduxjs/toolkit";
 
 //import { rollsReducer } from "../features/rolls/rollsSlice";
-import { commentsReducer } from "../features/comments/commentsSlice";
+//import { commentsReducer } from "../features/comments/commentsSlice";
 
 import productsReducer from "../features/productsSlice";
 
 import { productsApi } from "../features/productsApi";
 
-import { commentsApi } from "../features/commentsApi";
-
 import cartReducer from "../features/cartSlice";
 
-import logger from "redux-logger";
-/* logger is middleware */
+import { setupListeners } from "@reduxjs/toolkit/dist/query";
+
+//import { selectedProductReducer } from "../features/productsSlice";
+/* need middleware to handle api calls - redux toolkit used create AsyncThunk as middleware */
+/* added setupListeners as new - see also line 24 - then removed*/
 
 export const store = configureStore({
   reducer: {
-    comments: commentsReducer,
     products: productsReducer,
     cart: cartReducer,
     [productsApi.reducerPath]: productsApi.reducer,
-    [commentsApi.reducerPath]: commentsApi.reducer,
   },
-  middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat([logger]),
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware().concat(productsApi.middleware),
 });
+
+/*added new dispatch below */
+setupListeners(store.dispatch);

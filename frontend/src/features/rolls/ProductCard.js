@@ -4,10 +4,10 @@ import { Link } from "react-router-dom";
 
 const ProductCard = ({ product }) => {
   //I want the click on the button to put the item in the cart
-  const { id, name, image, cost } = product;
+  const { slug, name, image, cost } = product;
 
   return (
-    <Link to={`${id}`} style={{ textDecoration: "none" }}>
+    <Link to={`/product/${slug}`} style={{ textDecoration: "none" }}>
       <Card className="prices">
         <CardImg width="100%" src={image} alt={name} />
         <CardImgOverlay>

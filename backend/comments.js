@@ -1,17 +1,17 @@
-const comments = [
-  {
-    id: 0,
-    productId: 0,
-    rating: 5,
-    text: "I already need to order more.",
-    author: "Simon Hunt",
-    date: "2018-10-25T16:30Z",
-  },
-  {
+/*const comments = [
+//  {
+//    id: 0,
+//    productId: 0,
+//    rating: 5,
+//    text: "I already need to order more.",
+//    author: "Simon Hunt",
+//    date: "2018-10-25T16:30Z",
+//  },
+//  {
     id: 1,
     productId: 1,
     rating: 4,
-    text: "UPS smashed my box of goodies. They shipped me another order free of charge!",
+    text: "UPS smashed my box of goodies. They shipped me another one for free!",
     author: "Zandra Katherine",
     date: "2017-06-17T03:33Z",
   },
@@ -169,4 +169,4 @@ const comments = [
   },
 ];
 
-module.exports = comments;
+module.exports = comments; */

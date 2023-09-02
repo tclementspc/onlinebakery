@@ -595,9 +595,9 @@ h3 {
 
 .about-us {
   font-size: 28px;
-  color: black;
+  color: #0c06f7;
   font-weight: bold;
-  padding-top: 30px;
+  padding-top: 20px;
   padding-bottom: 30px;
 }
 .about-us-story {
@@ -611,4 +611,17 @@ h3 {
 }
 .container {
   display: inline-block;
+}
+.detail {
+  color: #00008b;
+  font-size: 20px;
+  font-weight: bolder;
+}
+.thanks {
+  font-size: 24px;
+  font-weight: bold;
+  color: #0c06f7;
+}
+.product-details {
+  padding-top: 15px;
 }

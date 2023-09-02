@@ -9,7 +9,7 @@ import {
 } from "reactstrap";
 import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
-import decbakerylogo4 from "../app/assets/images/decbakerylogo4.jpg";
+//import decbakerylogo4 from "../app/assets/images/decbakerylogo4.jpg";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -38,7 +38,7 @@ const Header = () => {
             </NavLink>
           </NavItem>
           <NavItem>
-            <NavLink className="nav-link" to="/shop">
+            <NavLink className="nav-link" to="/products">
               <i className="fa fa-list fa-lg" /> Shop
             </NavLink>
           </NavItem>
