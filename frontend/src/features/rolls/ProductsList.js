@@ -5,9 +5,12 @@ import { useEffect } from "react";
 //import { useGetAllProductsQuery } from "../productsApi";
 //import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { addToCart } from "../cartSlice";
+//import { addToCart } from "../cartSlice";
 import { useReducer } from "react";
 import axios from "axios";
+import Loading from "../../components/Loading";
+import { useContext } from "react";
+import { Store } from "../../contexts/Store";
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -23,6 +26,7 @@ const reducer = (state, action) => {
 };
 
 const ProductsList = () => {
+  const navigate = useNavigate();
   const [{ loading, error, products }, dispatch] = useReducer(reducer, {
     products: [],
     loading: true,
@@ -40,25 +44,36 @@ const ProductsList = () => {
       } catch (err) {
         dispatch({ type: "FETCH_FAIL", payload: err.message });
       }
-
-      // setProducts(result.data);
     };
     fetchData();
   }, []);
 
-  //const dispatch = useDispatch();
-  const navigate = useNavigate();
+  //const dispatch = useDispatch(); added line 51 for the cart
+  const { state, dispatch: ctxDispatch } = useContext(Store);
+  const {
+    cart: { cartItems },
+  } = state;
 
-  const handleAddToCart = (product) => {
-    dispatch(addToCart(product));
+  const handleAddToCart = async (item) => {
+    const existItem = cartItems.find((x) => x._id === item._id);
+    const quantity = existItem ? existItem.quantity + 1 : 1;
+
+    const { data } = await axios.get(`/api/products/${item._id}`);
+    if (data.countInStock < quantity) {
+      window.alert("Sorry. Product is out of stock.");
+      return;
+    }
+    ctxDispatch({
+      type: "CART_ADD_ITEM",
+      payload: { ...item, quantity },
+    });
   };
-
   return (
     <div>
       {loading ? (
-        <p>Loading...</p>
+        <Loading />
       ) : error ? (
-        <div>An error occurred..</div>
+        <div>{error}</div>
       ) : (
         <Row className="ms-auto">
           {products.map((product) => (

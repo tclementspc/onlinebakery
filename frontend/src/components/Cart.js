@@ -1,138 +1,146 @@
 //selected items go this cart list of products to add and delete amounts
-import { useEffect } from "react";
+//import { useEffect } from "react";
 /* useEffect is used to update the state of the cart as items added and removed */
-import { useSelector, useDispatch } from "react-redux";
+//import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
+//import {
+//  addToCart,
+//decreaseCart,
+//removeFromCart,
+// clearCart,
+// getTotals,
+//} from "../features/cartSlice";
+import { useContext } from "react";
+import { Store } from "../contexts/Store";
+import axios from "axios";
 import {
-  addToCart,
-  decreaseCart,
-  removeFromCart,
-  clearCart,
-  getTotals,
-} from "../features/cartSlice";
+  Col,
+  Row,
+  Button,
+  ListGroup,
+  ListGroupItem,
+  Card,
+  CardBody,
+} from "reactstrap";
+import MessageBox from "../components/MessageBox";
 
-const Cart = () => {
-  const cart = useSelector((state) => state.cart);
-  const dispatch = useDispatch();
+export default function Cart() {
+  // const cart = useSelector((state) => state.cart);
+  //  const dispatch = useDispatch();
 
-  useEffect(() => {
-    dispatch(getTotals());
-  }, [cart, dispatch]);
-  //useEffect called when component renders
+  const { state, dispatch: ctxDispatch } = useContext(Store);
+  const {
+    cart: { cartItems },
+  } = state;
 
-  const handleRemoveFromCart = (cartItem) => {
-    dispatch(removeFromCart(cartItem));
+  const updateCartHandler = async (item, quantity) => {
+    const { data } = await axios.get(`/api/products/${item._id}`);
+    if (data.countInStock < quantity) {
+      window.alert("Sorry. Product is out of stock.");
+      return;
+    }
+    ctxDispatch({
+      type: "CART_ADD_ITEM",
+      payload: { ...item, quantity },
+    });
   };
-  const handleDecreaseCart = (cartItem) => {
-    dispatch(decreaseCart(cartItem));
-  };
-  const handleIncreaseCart = (cartItem) => {
-    dispatch(addToCart(cartItem));
-  };
-
-  const handleClearCart = () => {
-    dispatch(clearCart());
+  const handleRemoveFromCart = (item) => {
+    ctxDispatch({ type: "CART_REMOVE_ITEM", payload: item });
   };
 
   return (
-    <div className="cart-container">
+    <div>
       <h2 className="begin-cart">Shopping Cart</h2>
-      {cart.cartItems.length === 0 ? (
-        <div className="cart-empty">
-          <p className="no-products">Your cart is currently empty</p>
-          <div className="start-shopping">
-            <Link to="/shop">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                fill="currentColor"
-                className="bi bi-arrow-left"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"
-                />
-              </svg>
-              <span className="begin-shopping">
-                Click here to start shopping
-              </span>
-            </Link>
-          </div>
-        </div>
-      ) : (
-        <div>
-          <div className="titles">
-            <h3 className="product-title">Product</h3>
-            <h3 className="price">Price</h3>
-            <h3 className="quantity">Quantity</h3>
-            <h3 className="total">Total</h3>
-          </div>
-          <div className="cart-items">
-            {cart.cartItems?.map((cartItem) => (
-              <div className="cart-item" key={cartItem.id}>
-                <div className="cart-product">
-                  <img src={cartItem.image} alt={cartItem.name} />
-                  <div>
-                    <h3 className="product-name">{cartItem.name}</h3>
-                    <button onClick={() => handleRemoveFromCart(cartItem)}>
-                      Remove
-                    </button>
+      <Row>
+        <Col md={8}>
+          {cartItems.length === 0 ? (
+            <MessageBox className="no-products">
+              Cart is empty.
+              <Link to="/shop"> Go Shopping </Link>
+            </MessageBox>
+          ) : (
+            <ListGroup>
+              {cartItems.map((item) => (
+                <ListGroupItem key={item._id}>
+                  <Row className="align-items-center">
+                    <Col md={4}>
+                      <img
+                        src={item.image}
+                        alt={item.name}
+                        className="image-fluid rounded img-thumbnail"
+                      ></img>{" "}
+                      <Link to={`/product/${item.slug}`}>{item.name}</Link>
+                    </Col>
+                    <Col md={3}>
+                      <Button
+                        style={{ backgroundColor: "blue" }}
+                        onClick={() =>
+                          updateCartHandler(item, item.quantity - 1)
+                        }
+                        disabled={item.quantity === 1}
+                      >
+                        <i className="fa fa-minus-circle"></i>
+                      </Button>{" "}
+                      <span className="item-quantity">{item.quantity}</span>{" "}
+                      <div className="test">
+                        <Button
+                          style={{ backgroundColor: "blue" }}
+                          onClick={() =>
+                            updateCartHandler(item, item.quantity + 1)
+                          }
+                          disabled={item.quantity === item.countInStock}
+                        >
+                          <i className="fa fa-plus-circle"></i>
+                        </Button>
+                      </div>
+                    </Col>
+                    <Col md={3}>
+                      <strong>${item.cost}/dozen</strong>
+                    </Col>
+                    <Col md={2}>
+                      <Button
+                        style={{ backgroundColor: "blue" }}
+                        onClick={() => handleRemoveFromCart(item)}
+                      >
+                        <i className="fa fa-trash"></i>
+                      </Button>
+                    </Col>
+                  </Row>
+                </ListGroupItem>
+              ))}
+            </ListGroup>
+          )}
+        </Col>
+        <Col md={4}>
+          <Card>
+            <CardBody>
+              <ListGroup variant="flush">
+                <ListGroupItem>
+                  <h3 className="sub-totalitems">
+                    Subtotal ({cartItems.reduce((a, c) => a + c.quantity, 0)}{" "}
+                    items) : $
+                    {cartItems.reduce((a, c) => a + c.cost * c.quantity, 0)}
+                  </h3>
+                </ListGroupItem>
+                <ListGroupItem className="taxes">
+                  **Taxes and shipping added at checkout
+                </ListGroupItem>
+                <ListGroupItem>
+                  <div className="d-grid">
+                    <Button
+                      type="button"
+                      style={{ backgroundColor: "#003399" }}
+                      disabled={cartItems.length === 0}
+                    >
+                      Proceed to Checkout
+                    </Button>
                   </div>
-                </div>
-                <div className="cart-product-price">${cartItem.cost}</div>
-                <div className="cart-product-quantity">
-                  <button onClick={() => handleDecreaseCart(cartItem)}>
-                    -
-                  </button>
-                  <div className="count">{cartItem.cartQuantity}</div>
-                  <button onClick={() => handleIncreaseCart(cartItem)}>
-                    +
-                  </button>
-                </div>
-                <div className="cart-product-total-price">
-                  ${cartItem.cost * cartItem.cartQuantity}
-                </div>
-              </div>
-            ))}
-          </div>
-          <div className="cart-summary">
-            <button className="clear-cart" onClick={() => handleClearCart()}>
-              Clear Cart
-            </button>
-            <div className="cart-checkout">
-              <div className="subtotal">
-                <span className="pre-total">Subtotal</span>
-                <span className="amount">${cart.cartTotalAmount}</span>
-              </div>
-              <p>Taxes and shipping calculated at checkout</p>
-              <button>Check out</button>
-              <div className="continue-shopping">
-                <Link to="/shop">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="20"
-                    height="20"
-                    fill="currentColor"
-                    className="bi bi-arrow-left"
-                    viewBox="0 0 16 16"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"
-                    />
-                  </svg>
-                  <span className="shop-more">
-                    Click here to continue shopping
-                  </span>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
+                </ListGroupItem>
+              </ListGroup>
+            </CardBody>
+          </Card>
+        </Col>
+      </Row>
     </div>
   );
-};
-export default Cart;
+}

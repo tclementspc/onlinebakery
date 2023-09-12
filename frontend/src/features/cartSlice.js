@@ -1,8 +1,8 @@
-import { createSlice } from "@reduxjs/toolkit";
-import { toast } from "react-toastify";
+//import { createSlice } from "@reduxjs/toolkit";
+//import { toast } from "react-toastify";
 //toastify will send messages when items are added to cart
 
-const initialState = {
+/*const initialState = {
   cartItems: localStorage.getItem("cartItems")
     ? JSON.parse(localStorage.getItem("cartItems"))
     : [],
@@ -30,10 +30,10 @@ const cartSlice = createSlice({
         toast.success(`${action.payload.name} added to cart`, {
           position: "bottom-left",
         });
-        //.info and success will make the message either blue or green color
+        info and success will make the message either blue or green color
       }
       localStorage.setItem("cartItems", JSON.stringify(state.cartItems));
-      //line 33 adds cart items to local storage so you won't lose them when you refresh pg
+      line 33 adds cart items to local storage so you won't lose them when you refresh pg
     },
     removeFromCart(state, action) {
       const nextCartItems = state.cartItems.filter(
@@ -42,7 +42,7 @@ const cartSlice = createSlice({
 
       state.cartItems = nextCartItems;
       localStorage.setItem("cartItems", JSON.stringify(state.cartItems));
-      /*line 44 updates the state in local storage after item removed from cart */
+      line 44 updates the state in local storage after item removed from cart 
       toast.error(`${action.payload.name} removed from cart`, {
         position: "bottom-left",
       });
@@ -99,9 +99,10 @@ const cartSlice = createSlice({
     },
   },
 });
-//above method to add items to cart and keep up with cartQuantity
+above method to add items to cart and keep up with cartQuantity
 
 export const { addToCart, removeFromCart, decreaseCart, clearCart, getTotals } =
   cartSlice.actions;
 
 export default cartSlice.reducer;
+*/

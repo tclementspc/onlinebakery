@@ -244,6 +244,7 @@ h3 {
   align-items: center;
   color: blue;
   font-weight: bold;
+  padding-top: 20px;
 }
 .no-products {
   font-size: 20px;
@@ -294,9 +295,10 @@ p {
 
 .textcolor {
   color: black;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: bold;
   text-decoration: none;
+  font-family: "Montserrat";
 }
 
 header {
@@ -624,4 +626,31 @@ h3 {
 }
 .product-details {
   padding-top: 15px;
+}
+.second-add {
+  background-color: #e80a4d;
+  color: white;
+}
+.status {
+  color: #00008b;
+  font-size: 16px;
+  font-weight: bold;
+}
+.in-stock {
+  padding-top: 10px;
+}
+.img-thumbnail {
+  height: 80px;
+}
+.sub-totalitems {
+  color: #00008b;
+  font-size: 18px;
+  font-weight: bold;
+}
+.item-quantity {
+  font-weight: bold;
+}
+
+.taxes {
+  font-size: 14px;
 }

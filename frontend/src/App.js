@@ -9,8 +9,8 @@ import Footer from "../src/components/Footer";
 //import RollsDetailPage from "../src/pages/RollsDetailPage";
 
 //header contains navbar which should keep track of items in cart
-import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+//import { ToastContainer } from "react-toastify";
+//import "react-toastify/dist/ReactToastify.css";
 import CartPage from "./pages/CartPage";
 import AboutPage from "./pages/AboutPage";
 import ProductDirectoryPage from "./pages/ProductDirectoryPage";
@@ -20,13 +20,12 @@ import ProductDetailPage from "./pages/ProductDetailPage";
 function App() {
   return (
     <div className="App">
-      <ToastContainer />
       <Header />
 
       <Routes>
         <Route path="/product/:slug" element={<ProductDetailPage />} />
         <Route path="products" element={<ProductDirectoryPage />} />
-        <Route path="/cart" element={<CartPage />} />
+        <Route path="cart" element={<CartPage />} />
         <Route path="contact" element={<ContactPage />} />
         <Route path="about" element={<AboutPage />} />
         <Route exact path="/" element={<HomePage />} />

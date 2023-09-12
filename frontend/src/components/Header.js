@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import {
   Navbar,
   NavbarBrand,
@@ -6,15 +6,18 @@ import {
   NavbarToggler,
   Nav,
   NavItem,
+  Badge,
 } from "reactstrap";
-import { useSelector } from "react-redux";
+//import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
-//import decbakerylogo4 from "../app/assets/images/decbakerylogo4.jpg";
+import { Store } from "../contexts/Store";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const { cartTotalQuantity } = useSelector((state) => state.cart);
+  //  const { cartTotalQuantity } = useSelector((state) => state.cart);
   //added cart item to show how many items are in the cart
+  const { state } = useContext(Store);
+  const { cart } = state;
 
   return (
     <Navbar dark className="navigation" sticky="top" expand="md">
@@ -49,10 +52,15 @@ const Header = () => {
           </NavItem>
           <NavItem>
             <NavLink className="nav-link" to="/cart">
-              <i className="fa fa-shopping-cart" /> Your Cart
-              <span id="bag-quantity">
-                <span className="cart-totalQ">{cartTotalQuantity}</span>
-              </span>
+              <i className="fa fa-shopping-cart" />
+              Your Cart
+              {cart.cartItems.length > 0 && (
+                <Badge pill color="warning">
+                  <strong>
+                    {cart.cartItems.reduce((a, c) => a + c.quantity, 0)}
+                  </strong>
+                </Badge>
+              )}
             </NavLink>
           </NavItem>
         </Nav>
