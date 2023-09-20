@@ -8,7 +8,7 @@ This is an Online Bakery Application which allows the user to shop at an online 
 
 ## Credit
 
-This project was created with the assistance of NuCamp Coding Bootcamp resources and Youtuber Charles Chaoo.
+This E-commerce project was created with the assistance of NuCamp Coding Bootcamp resources and Youtubers Charles Chaoo and Coding with Basir.
 
 ## Available Scripts
 
@@ -16,7 +16,9 @@ In the project directory, you can run:
 
 ### `npm start`
 
-Runs the app in the development mode.\
+Open the backend and run nodemon in the backend first, which will run on http://localhost:5000. Second, you change the directory to the frontend and open the website using npm start.
+
+Runs the app in the development mode.
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\

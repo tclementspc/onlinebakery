@@ -654,3 +654,12 @@ h3 {
 .taxes {
   font-size: 14px;
 }
+.add {
+  border-radius: 50%;
+}
+.small-container {
+  max-width: 600px;
+}
+.sign-in {
+  max-width: 200px;
+}

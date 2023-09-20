@@ -23,10 +23,12 @@ import {
   CardBody,
 } from "reactstrap";
 import MessageBox from "../components/MessageBox";
+import { useNavigate } from "react-router-dom";
 
 export default function Cart() {
   // const cart = useSelector((state) => state.cart);
   //  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const { state, dispatch: ctxDispatch } = useContext(Store);
   const {
@@ -46,6 +48,10 @@ export default function Cart() {
   };
   const handleRemoveFromCart = (item) => {
     ctxDispatch({ type: "CART_REMOVE_ITEM", payload: item });
+  };
+
+  const checkoutHandler = () => {
+    navigate("/signin?redirect=/shipping");
   };
 
   return (
@@ -71,7 +77,7 @@ export default function Cart() {
                       ></img>{" "}
                       <Link to={`/product/${item.slug}`}>{item.name}</Link>
                     </Col>
-                    <Col md={3}>
+                    <Col md={2}>
                       <Button
                         style={{ backgroundColor: "blue" }}
                         onClick={() =>
@@ -84,6 +90,7 @@ export default function Cart() {
                       <span className="item-quantity">{item.quantity}</span>{" "}
                       <div className="test">
                         <Button
+                          className="add"
                           style={{ backgroundColor: "blue" }}
                           onClick={() =>
                             updateCartHandler(item, item.quantity + 1)
@@ -94,8 +101,8 @@ export default function Cart() {
                         </Button>
                       </div>
                     </Col>
-                    <Col md={3}>
-                      <strong>${item.cost}/dozen</strong>
+                    <Col md={4}>
+                      <strong>${item.cost} per dozen</strong>
                     </Col>
                     <Col md={2}>
                       <Button
@@ -129,6 +136,7 @@ export default function Cart() {
                   <div className="d-grid">
                     <Button
                       type="button"
+                      onClick={() => checkoutHandler()}
                       style={{ backgroundColor: "#003399" }}
                       disabled={cartItems.length === 0}
                     >

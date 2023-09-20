@@ -16,6 +16,7 @@ import AboutPage from "./pages/AboutPage";
 import ProductDirectoryPage from "./pages/ProductDirectoryPage";
 import ProductDetailPage from "./pages/ProductDetailPage";
 //putting in the ProductDetailPage to pull out individual productId ne line below
+import SignIn from "./components/SignIn";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <Route path="/product/:slug" element={<ProductDetailPage />} />
         <Route path="products" element={<ProductDirectoryPage />} />
         <Route path="cart" element={<CartPage />} />
+        <Route path="/signin" element={<SignIn />} />
         <Route path="contact" element={<ContactPage />} />
         <Route path="about" element={<AboutPage />} />
         <Route exact path="/" element={<HomePage />} />

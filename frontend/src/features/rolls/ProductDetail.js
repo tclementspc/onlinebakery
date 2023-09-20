@@ -138,7 +138,7 @@ const ProductDetail = () => {
                       <button
                         className="btn btn-primary"
                         onClick={() => {
-                          handleAddToCart();
+                          handleAddToCart(product);
                         }}
                       >
                         Add To Cart
